@@ -20,6 +20,12 @@
   to = "/contact.html"
   status = 200
 
+# Custom 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
 # Security headers
 [[headers]]
   for = "/*"
@@ -27,6 +33,7 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
 # Cache assets aggressively
 [[headers]]
