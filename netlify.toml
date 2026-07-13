@@ -1,6 +1,9 @@
 [build]
   publish = "."
 
+# Force HTTPS and www -> apex redirect (Netlify handles this automatically
+# when the primary domain is the apex and www is an alias)
+
 # Pretty URLs - strip .html extension
 [[redirects]]
   from = "/about"
